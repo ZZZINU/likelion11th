@@ -29,3 +29,45 @@ i:nth-child(1)::before {
     line-height: 1.1;
 }
 
+/* 로그인 입력창 */
+input {
+    display: flex;
+    font-size: large;
+    text-align: left;
+    margin-top: 100px;
+    margin-left: 35px;
+    padding-bottom: 10px;
+    padding-right: 100px;
+    border: 0;
+    border-bottom: solid 1px #898888;
+    outline: none;
+}
+
+input::placeholder {
+    color: #898888;
+}
+
+input[type=password] {
+    margin-top: 10px;
+}
+
+input[type=submit] {
+    margin: 0;
+    margin-top: 30px;
+    text-align: center;
+    padding: 15px 135px 15px 135px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #F2D64B;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+}
+
+.login-content {
+    margin-top: 30px;
+}
+
+
+
+/* 로그인 버튼 */
