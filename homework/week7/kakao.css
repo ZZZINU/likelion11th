@@ -11,7 +11,7 @@ body {
     text-align: center;
 }
 
-i:nth-child(1)::before {
+.status-bar i:nth-child(1)::before {
     content: "\f1eb";
     margin-right : 115px;
 }
@@ -51,6 +51,7 @@ input[type=password] {
     margin-top: 10px;
 }
 
+/* 로그인 버튼 */
 input[type=submit] {
     margin: 0;
     margin-top: 30px;
@@ -64,10 +65,21 @@ input[type=submit] {
     display: inline-block;
 }
 
+/* 로그인 content */
 .login-content {
     margin-top: 30px;
 }
 
+/* top-bar */
+.top-bar {
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: left;
+}
 
+.top-bar i::before {
+    font-size: 25px;
+    margin-right: 15px;
+}
 
-/* 로그인 버튼 */
