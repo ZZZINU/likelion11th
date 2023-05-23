@@ -83,3 +83,30 @@ input[type=submit] {
     margin-right: 15px;
 }
 
+.friends-name {
+    background-color: #FAFAFA;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* progile */
+
+.profile {
+    float: left;
+    margin: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    padding-right: 185px;
+    border-bottom: solid 1px gray;
+}
+
+.profile-img { 
+    width: 80px;
+    height: 80px;
+    border-radius: 30px;
+}
