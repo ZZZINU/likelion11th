@@ -8,9 +8,24 @@ body {
 
 .container {
     width: 100vw;
+    text-align: center;
 }
 
 i:nth-child(1)::before {
     content: "\f1eb";
     margin-right : 115px;
 }
+
+.title {
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.sub-title {
+    margin-top: 20px;
+    font-size: 15px;
+    color: gray;
+    line-height: 1.1;
+}
+
