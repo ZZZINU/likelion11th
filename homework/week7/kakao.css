@@ -158,11 +158,66 @@ input[type=submit] {
     display: flex;
     font-size: 30px;
     justify-content: space-between;
-    position: fixed;
+    position: absolute;
     border-top: 1px solid gray;
     background-color: #F9F9FA;
     left: 0;
     right: 0;
     bottom: 0;
     padding: 30px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    float: bottom;
+}
+
+/* splash 구현 */
+.yellow-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    display: inline-block;
+    background: #F6E24B;
+    padding: 10px;
+    animation: fadeOut 3s 2s forwards;
+    z-index: 2;
+}
+
+.logo {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 50px;
+    top: 300px;
+
+    animation-fill-mode: forwards;
+    animation-name: fadeIn, fadeOut;
+    animation-delay: 0s, 2s;
+    animation-duration: 1s, 1s;
+
+    z-index: 3;
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut{
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
