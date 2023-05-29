@@ -277,3 +277,28 @@ input[type=submit] {
 .message_alarm_img {
     width: 20px;
 }
+
+/* Chating 페이지 */
+.chating-top-bar {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.chating-top-bar-item:nth-child(2) {
+    margin-right: 80px;
+    margin-left: 120px;
+}
+
+.chating-date {
+    margin-top: 100px;
+}
+
+.chating-date-img {
+    width: 200px;
+}
+
