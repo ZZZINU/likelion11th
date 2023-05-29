@@ -165,7 +165,7 @@ input[type=submit] {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 30px;
+    padding: 25px;
     float: bottom;
 }
 
@@ -180,6 +180,7 @@ input[type=submit] {
     background: #F6E24B;
     animation: fadeOut 3s 2s forwards;
     z-index: 2;
+    pointer-events: none;
 }
 
 .logo {
@@ -218,4 +219,11 @@ input[type=submit] {
     to {
         opacity: 0;
     }
+}
+
+/* icon link */
+.icon-link {
+
+    color: black;
+    text-decoration: none;
 }
