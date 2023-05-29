@@ -296,11 +296,89 @@ input[type=submit] {
 
 .chating-date {
     margin-top: 100px;
+    display: flex;
+    justify-content: center;
 }
 
-.chating-date-img {
+.date-circle {
+    display: flex;
     width: 200px;
+    height: 50px;
+    color: white;
+    background: #98A7B5;
+    border-radius: 80px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
 }
+
+.chating-kakao {
+    display: flex;
+    margin: 0px 30px 0px 30px;
+    justify-content: space-between;
+}
+
+.kakao-img {
+    width: 50px;
+    border-radius: 30%;
+}
+
+.chating-kakao-content{
+    text-align: left;
+}
+
+.chating-kakao-content-chat {
+    display: flex;
+    width: 214px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 0px 15px 15px 15px;
+    margin-top: 5px;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.chating-kakao-time {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+/* my chat */
+.chating-my {
+    margin: 30px 30px 0px 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chating-my-chat {
+    display: flex;
+    width: 60px;
+    height: 45px;
+    background: #F6E24B;
+    border-radius: 15px 0px 15px 15px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+/* chat input */
+.chating-input {
+    display: flex;
+    position: fixed;
+    bottom: 5px;
+}
+
+.chating-input input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 
 
 /* finds 페이지 */
