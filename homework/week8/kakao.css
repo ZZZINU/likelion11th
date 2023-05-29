@@ -350,3 +350,81 @@ input[type=submit] {
     margin: 120px 30px 140px 30px;
     font-size: 16px;
 }
+
+/* Open Chat */
+.openChat {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 30px 0px 30px;
+}
+
+.openChat-title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.openChat-item:nth-child(2) {
+    color: gray;
+}
+
+.openChat-item i::before {
+    font-size: 10px;
+}
+
+
+.openChat-content {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+}
+
+.openChat-content .openChat-item .title {
+    margin: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.openChat-content .openChat-item .content {
+    margin: 0px;
+    color: gray;
+    margin-bottom: 3px;
+}
+
+.openChat-item-profile-img {
+    width: 20px;
+    border-radius: 50%;
+}
+
+.openChat-item-main-img {
+    width: 110px;
+    border-radius: 10px;
+}
+
+.openChat-content .openChat-item .info {
+    display: flex;
+    color: #898888;
+}
+
+.active {
+    color: pink;
+}
+
+.openChat-content .openChat-item:nth-child(2) {
+    position: relative;
+}
+
+.black-shape {
+    position: absolute;
+    width: 55px;
+    height: 27px;
+    top: 80px;
+    left: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 80px;
+    text-align: center;
+    color: white;
+}
