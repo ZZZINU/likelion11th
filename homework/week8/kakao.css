@@ -331,3 +331,22 @@ input[type=submit] {
 .function-item i::before {
     font-size: 35px;
 }
+
+/* recommended friends */
+.recommended-friends {
+    margin: 0px 30px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #898888;
+    color: gray;
+}
+
+.recommended-friends-title {
+    text-align: left;
+    font-size: 12px;
+}
+
+.recommended-friends-content {
+    margin: 120px 30px 140px 30px;
+    font-size: 16px;
+}
