@@ -404,7 +404,7 @@ input[type=submit] {
     z-index: 2;
 }
 
-input[type="text"]:focus {
+.chating-input input[type="text"]:focus {
     outline: none;
     border-color: #007bff;
     box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
@@ -427,7 +427,7 @@ input[type="text"]:focus {
     align-items: center;
 }
 
-input[type="text"]:focus + .under-chating-input {
+.chating-input input[type="text"]:focus + .under-chating-input {
     transform: translateY(100%);
 }
 
