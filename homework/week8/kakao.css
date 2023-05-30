@@ -281,6 +281,26 @@ input[type=submit] {
     width: 20px;
 }
 
+.nav i:nth-child(2)::before {
+    position: absolute;
+    font-size: 100px;
+}
+
+.kakao-alarm {
+    display: flex;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    bottom: 40px;
+    left: 20px;
+    border-radius: 50%;
+    background: #ED6D52;
+    font-size: 13px;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
 /* Chating 페이지 */
 .chating-top-bar {
     display: flex;
