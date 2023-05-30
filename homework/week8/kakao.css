@@ -663,3 +663,42 @@ input[type=submit] {
     align-items: center;
     margin-right: 25px;
 }
+
+/* 알림(빨간 점) */
+.nav i:nth-child(4)::before {
+    position: absolute;
+}
+
+.red-dot-ellipsis {
+    display: flex;
+    position: relative;
+    width: 6px;
+    height: 6px;
+    bottom: 35px;
+    left: 25px;
+    border-radius: 50%;
+    background: #ED6D52;
+}
+
+/* more 페이지에서 red-dot */
+.red-dot-cog {
+    display: flex;
+    position: relative;
+    width: 6px;
+    height: 6px;
+    bottom: 30px;
+    left: 130px;
+    border-radius: 50%;
+    background: #ED6D52;
+}
+
+.red-dot-cog-finds {
+    display: flex;
+    position: relative;
+    width: 6px;
+    height: 6px;
+    bottom: 30px;
+    left: 80px;
+    border-radius: 50%;
+    background: #ED6D52;
+}
