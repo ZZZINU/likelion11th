@@ -1,0 +1,232 @@
+/* 마진과 패팅을 없애고, 모두 border-box로 바꿔주는 코드*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    /* 변경: 100% 대신 100vh 사용 */
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    height: 450px;
+    margin: auto;
+    border: 2px solid black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.line {
+    display: flex;
+    height: 17%;
+    border-radius: 5px;
+    margin: 5px;
+    margin-bottom:0px;
+}
+
+.line:nth-child(1) {
+    border: 2px solid black;
+    background-color: #E4E8EC;
+}
+
+.clear {
+    display: flex;
+    width: 75%;
+    border: 2px solid black;
+    margin-right: 5px;
+    border-radius: 5px;
+    background-color: #EB3E3F;
+    justify-content: center;
+    align-items: center;
+}
+
+.division {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #2B3438;
+    color: white;
+}
+
+.one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: #E4E8EC;
+}
+
+.two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: #E4E8EC;
+}
+
+.three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: #E4E8EC;
+}
+
+.mul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #2B3438;
+    color: white;
+}
+
+.four {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: #E4E8EC;
+}
+
+.five {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: #E4E8EC;
+}
+
+.six {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: #E4E8EC;
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #2B3438;
+    color: white;
+}
+
+.seven {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: #E4E8EC;
+}
+
+.eight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: #E4E8EC;
+}
+
+.nine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: #E4E8EC;
+}
+
+.sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #2B3438;
+    color: white;
+}
+
+.line:nth-child(6) {
+    margin-bottom: 5px;
+}
+
+.dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: #FF9A00;
+}
+
+.zero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: #E4E8EC;
+}
+
+.equal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #2B3438;
+    color: white;
+}

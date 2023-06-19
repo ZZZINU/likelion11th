@@ -32,7 +32,7 @@ const num2Input = document.getElementById('num2');
 const resultSpan = document.getElementById('result');
 
 function calculate() {
-    const num1 = parseInt(num1Input.value);
+    const num1 = parseInt(num1Input.value); // string -> 정수로 변환
     const num2 = parseInt(num2Input.value);
     if (!isNaN(num1) && !isNaN(num2)) {
         const result = num1 + num2;
