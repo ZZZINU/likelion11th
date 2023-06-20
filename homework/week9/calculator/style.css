@@ -5,26 +5,29 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #AE9ED0;
+}
+
 .container {
     display: flex;
     width: 100vw;
     height: 100vh;
-    /* 변경: 100% 대신 100vh 사용 */
     justify-content: center;
     align-items: center;
 }
 
+/* 계산기 */
 .calculator {
     display: flex;
     flex-direction: column;
     background-color: white;
     border-radius: 10px;
-    width: 300px;
-    height: 450px;
+    width: 240px;
+    height: 350px;
     margin: auto;
     border: 2px solid black;
-    font-size: 25px;
-    font-weight: bold;
+    box-shadow: 3px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 .line {
@@ -36,10 +39,10 @@
 }
 
 .line:nth-child(1) {
-    border: 2px solid black;
     background-color: #E4E8EC;
 }
 
+/* C */
 .clear {
     display: flex;
     width: 75%;
@@ -51,6 +54,7 @@
     align-items: center;
 }
 
+/* / */
 .division {
     display: flex;
     justify-content: center;
@@ -62,6 +66,7 @@
     color: white;
 }
 
+/* 1 */
 .one {
     display: flex;
     justify-content: center;
@@ -73,6 +78,7 @@
     background-color: #E4E8EC;
 }
 
+/* 2 */
 .two {
     display: flex;
     justify-content: center;
@@ -84,6 +90,7 @@
     background-color: #E4E8EC;
 }
 
+/* 3 */
 .three {
     display: flex;
     justify-content: center;
@@ -95,6 +102,7 @@
     background-color: #E4E8EC;
 }
 
+/* * */
 .mul {
     display: flex;
     justify-content: center;
@@ -106,6 +114,7 @@
     color: white;
 }
 
+/* 4 */
 .four {
     display: flex;
     justify-content: center;
@@ -117,6 +126,7 @@
     background-color: #E4E8EC;
 }
 
+/* 5 */
 .five {
     display: flex;
     justify-content: center;
@@ -128,6 +138,7 @@
     background-color: #E4E8EC;
 }
 
+/* 6 */
 .six {
     display: flex;
     justify-content: center;
@@ -139,6 +150,7 @@
     background-color: #E4E8EC;
 }
 
+/* + */
 .add {
     display: flex;
     justify-content: center;
@@ -150,6 +162,7 @@
     color: white;
 }
 
+/* 7 */
 .seven {
     display: flex;
     justify-content: center;
@@ -161,6 +174,7 @@
     background-color: #E4E8EC;
 }
 
+/* 8 */
 .eight {
     display: flex;
     justify-content: center;
@@ -172,6 +186,7 @@
     background-color: #E4E8EC;
 }
 
+/* 9 */
 .nine {
     display: flex;
     justify-content: center;
@@ -183,6 +198,7 @@
     background-color: #E4E8EC;
 }
 
+/* - */
 .sub {
     display: flex;
     justify-content: center;
@@ -198,6 +214,7 @@
     margin-bottom: 5px;
 }
 
+/* . */
 .dot {
     display: flex;
     justify-content: center;
@@ -209,6 +226,7 @@
     background-color: #FF9A00;
 }
 
+/* 0 */
 .zero {
     display: flex;
     justify-content: center;
@@ -220,6 +238,7 @@
     background-color: #E4E8EC;
 }
 
+/* = */
 .equal {
     display: flex;
     justify-content: center;
@@ -229,4 +248,31 @@
     border-radius: 5px;
     background-color: #2B3438;
     color: white;
+}
+
+/* 수식이 보이는 부분 */
+.calculator input[type="text"]{
+    display: flex;
+    width: 100%;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    background-color: #E4E8EC;
+
+    border: none;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+/* 각 버튼 */
+.calculator input[type="button"]{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 각 버튼 마우스 올렸을 때 효과 */
+.calculator input[type="button"]:hover{
+    box-shadow: 1px 1px 2px black;
+    cursor: pointer;
 }

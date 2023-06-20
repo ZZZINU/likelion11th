@@ -12,38 +12,40 @@
 
 <body id="background">
     <div class="container">
-        <div class="calculator">
-            <div class="line"></div>
-            <div class="line">
-                <div class="clear">C</div>
-                <div class="division">/</div>  
-            </div>
-            <div class="line">
-                <div class="one">1</div>
-                <div class="two">2</div>
-                <div class="three">3</div>
-                <div class="mul">*</div>
-            </div>
-            <div class="line">
-                <div class="four">4</div>
-                <div class="five">5</div>
-                <div class="six">6</div>
-                <div class="add">+</div>
-            </div>
-            <div class="line">
-                <div class="seven">7</div>
-                <div class="eight">8</div>
-                <div class="nine">9</div>
-                <div class="sub">-</div>
-            </div>
-            <div class="line">
-                <div class="dot">.</div>
-                <div class="zero">0</div>
-                <div class="equal">=</div>
-            </div>
-        </div>
-    </div>
+        <form name="calculator" class="calculator">
 
+                <div class="line">
+                    <input type="text" name="screen" readonly>
+                </div>
+                <div class="line">
+                    <input type="button" value="C" class="clear" onclick="clearInput()">
+                    <input type="button" value="/" class="division" onclick="input('/')">
+                </div>
+                <div class="line">
+                    <input type="button" value="1" class="one" onclick="input(1)">
+                    <input type="button" value="2" class="two" onclick="input(2)">
+                    <input type="button" value="3" class="three" onclick="input(3)">
+                    <input type="button" value="*" class="mul" onclick="input('*')">
+                </div>
+                <div class="line">
+                    <input type="button" value="4" class="four" onclick="input(4)">
+                    <input type="button" value="5" class="five" onclick="input(5)">
+                    <input type="button" value="6" class="six" onclick="input(6)">
+                    <input type="button" value="+" class="add" onclick="input('+')">
+                </div>
+                <div class="line">
+                    <input type="button" value="7" class="seven" onclick="input(7)">
+                    <input type="button" value="8" class="eight" onclick="input(8)">
+                    <input type="button" value="9" class="nine" onclick="input(9)">
+                    <input type="button" value="-" class="sub" onclick="input('-')">
+                </div>
+                <div class="line">
+                    <input type="button" value="." class="dot" onclick="input('.')">
+                    <input type="button" value="0" class="zero" onclick="input(0)">
+                    <input type="button" value="=" class="equal" onclick="myCalculator()">
+                </div>
+            </div>
+        </form>
 </body>
 
 </html>
