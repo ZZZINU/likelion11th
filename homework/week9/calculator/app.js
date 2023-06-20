@@ -75,12 +75,12 @@ function myCalculator() {
       // 연산자라면
       while (
         temp_operator.length > 0 && // 연산자가 하나라도 들어있는지
-        // 그리고 '바로 전 연산자의 우선순위' > '현재 연산자의 우선순위'
+        // 그리고 '바로 전 연산자의 우선순위' >= '현재 연산자의 우선순위'
         priority[temp_operator[temp_operator.length - 1]] >= priority[token]
       ) {
-        postfix.push(temp_operator.pop()); //
+        postfix.push(temp_operator.pop()); //전 연산자 먼저 postfix에 push
       }
-      temp_operator.push(token); // ttemp_operator에 아무것도 없으면 push
+      temp_operator.push(token); // temp_operator에 아무것도 없으면 push
     }
   });
 
