@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import { bigTheme, smallTheme } from './theme.jsx'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components' // ThemeProvider
 import { RouterProvider } from 'react-router-dom'
 import router from './Router.jsx'
 
