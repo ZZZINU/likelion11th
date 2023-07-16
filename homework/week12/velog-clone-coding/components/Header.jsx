@@ -24,14 +24,14 @@ const Nav = styled.header`
 const Logo = styled.div`
   display: flex;
   margin-right: 30%;
-  margin-left: 5%;
+  margin-left: 10%;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 600;
 `;
 const NavListItems = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-right: 5%;
+  margin-right: 10%;
   align-items: center;
 `;
 const NavListItem = styled.div`

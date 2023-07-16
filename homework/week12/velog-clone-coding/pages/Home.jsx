@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -6,10 +7,11 @@ import {
   faEllipsisVertical,
 } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
+import { Board } from "../components/Board";
 
 const Body = styled.div`
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
   color: #212529;
 `;
 const Category = styled.div`
@@ -22,6 +24,7 @@ const Category = styled.div`
   font-weight: bold;
 
   margin-top: 30px;
+  margin-bottom: 30px;
 `;
 const CategoryLeft = styled.div`
   display: flex;
@@ -55,6 +58,7 @@ const PeriodText = styled.div`
   margin-right: 10px;
 `;
 
+
 function Home() {
   return (
     <Body>
@@ -75,6 +79,9 @@ function Home() {
           <FontAwesomeIcon icon={faEllipsisVertical} />
         </CategoryRight>
       </Category>
+
+        <Board />
+
     </Body>
   );
 }
