@@ -45,7 +45,7 @@ export function Board() {
       id: 3,
       previewImg: TechitImg,
       title: "TECHIT 강의 내용 정리",
-      text: "준비중입니다.",
+      text: "[노마드 코더 - 실전형 리액트 Hooks 10개] 강의를 듣고 정리하였습니다. 크게 useState와 useEffect에 대한 내용이며, 총 10개의 Hooks를 제작해보았습니다. ",
       date: "2023년 7월 18일",
       commentCount: 0,
       profileImg: ProfileImg,
