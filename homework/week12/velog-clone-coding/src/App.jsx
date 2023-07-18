@@ -1,6 +1,8 @@
-import { createGlobalStyle } from "styled-components";
+import React, { useState } from "react";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Outlet } from 'react-router-dom';
 import Header from "../components/Header";
+import { lightTheme, darkTheme } from "./Theme";
 
 const GlobalStyle = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -54,11 +56,18 @@ table {
 `;
 
 function App() {
+	const [isDarkMode, setIsDarkMode] = useState(false);
+
+	const toggleDarkMode = () => {
+	  setIsDarkMode(prevMode => !prevMode);
+	};
   return (
     <>
+      <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
 		<GlobalStyle />
-		<Header />
+        <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 		<Outlet />
+	</ThemeProvider>
     </>
   )
 };

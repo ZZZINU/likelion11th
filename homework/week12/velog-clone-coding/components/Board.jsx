@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { Card } from "./Card";
 import StyledComponentsImg from "../src/images/styledComponents.png";
 import ReactRouterDom from "../src/images/reactRouterDom.png";
@@ -11,41 +12,64 @@ const Content = styled.div`
   display: flex;
   justify-content: space-between;
 `;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+`;
 
 export function Board() {
-    return (
+  const posts = [
+    {
+      id: 1,
+      previewImg: StyledComponentsImg,
+      title: "Styled-Component 내용 정리",
+      text: "준비중입니다.",
+      date: "2023년 7월 16일",
+      commentCount: 0,
+      profileImg: ProfileImg,
+      writer: "ZZINU",
+      likeCount: 8,
+    },
+    {
+      id: 2,
+      previewImg: ReactRouterDom,
+      title: "React-Router-Dom 내용 정리",
+      text: "준비중입니다.",
+      date: "2023년 7월 16일",
+      commentCount: 0,
+      profileImg: ProfileImg,
+      writer: "ZZINU",
+      likeCount: 3,
+    },
+    {
+      id: 3,
+      previewImg: TechitImg,
+      title: "TECHIT 강의 내용 정리",
+      text: "준비중입니다.",
+      date: "2023년 7월 18일",
+      commentCount: 0,
+      profileImg: ProfileImg,
+      writer: "ZZINU",
+      likeCount: 0,
+    },
+    // 나머지 포스트들...
+  ];
+  return (
     <Content>
-    <Card
-    previewImg={StyledComponentsImg}
-    title="Styled-Component 내용 정리"
-    text="원문 : https://www.builder.io/blog/ai-prompts-for-web-developers-chatgpt지루하고 반복적인 코딩 작업에 지쳐서 효율성을 최적화하고 싶으시다면 제대로 찾아오셨습니다."
-    date="2023년 7월 16일"
-    commentCount={8}
-    profileImg={ProfileImg}
-    writer="ZZINU"
-    likeCount={4}
-    />
-
-    <Card
-    previewImg={ReactRouterDom}
-    title="Styled-Component 내용 정리"
-    text="원문 : https://www.builder.io/blog/ai-prompts-for-web-developers-chatgpt지루하고 반복적인 코딩 작업에 지쳐서 효율성을 최적화하고 싶으시다면 제대로 찾아오셨습니다."
-    date="2023년 7월 16일"
-    commentCount={8}
-    profileImg={ProfileImg}
-    writer="ZZINU"
-    likeCount={4}
-    />
-    <Card
-    previewImg={TechitImg}
-    title="Styled-Component 내용 정리"
-    text="원문 : https://www.builder.io/blog/ai-prompts-for-web-developers-chatgpt지루하고 반복적인 코딩 작업에 지쳐서 효율성을 최적화하고 싶으시다면 제대로 찾아오셨습니다."
-    date="2023년 7월 16일"
-    commentCount={8}
-    profileImg={ProfileImg}
-    writer="ZZINU"
-    likeCount={4}
-    />
+      {posts.map((post) => (
+        <StyledLink key={post.id} to={`/post/${post.id}`}>
+          <Card
+            previewImg={post.previewImg}
+            title={post.title}
+            text={post.text}
+            date={post.date}
+            commentCount={post.commentCount}
+            profileImg={post.profileImg}
+            writer={post.writer}
+            likeCount={post.likeCount}
+          />
+        </StyledLink>
+      ))}
     </Content>
-        );
+  );
 }

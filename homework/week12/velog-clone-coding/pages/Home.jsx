@@ -9,10 +9,14 @@ import {
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import { Board } from "../components/Board";
 
+const Root = styled.div`
+  color: ${({ theme }) => theme.textColor};
+  background-color: ${({ theme }) => theme.backgroundColor};
+  min-height: 100vh;
+`;
 const Body = styled.div`
   margin-left: 10%;
   margin-right: 10%;
-  color: #212529;
 `;
 const Category = styled.div`
   display: flex;
@@ -23,7 +27,7 @@ const Category = styled.div`
   font-size: 18px;
   font-weight: bold;
 
-  margin-top: 30px;
+  padding: 30px 0px;
   margin-bottom: 30px;
 `;
 const CategoryLeft = styled.div`
@@ -58,31 +62,31 @@ const PeriodText = styled.div`
   margin-right: 10px;
 `;
 
-
 function Home() {
   return (
-    <Body>
-      <Category>
-        <CategoryLeft>
-          <CategoryItem style={{ borderBottom: "2px solid" }}>
-            <FontAwesomeIcon icon={faArrowTrendUp} /> &nbsp; 트렌딩
-          </CategoryItem>
-          <CategoryItem style={{ color: "#868e96", fontWeight: 400 }}>
-            <FontAwesomeIcon icon={faClock} /> &nbsp; 최신
-          </CategoryItem>
-          <Period>
-            <PeriodText>이번 주</PeriodText>
-            <FontAwesomeIcon icon={faCaretDown} />
-          </Period>
-        </CategoryLeft>
-        <CategoryRight>
-          <FontAwesomeIcon icon={faEllipsisVertical} />
-        </CategoryRight>
-      </Category>
+    <Root>
+      <Body>
+        <Category>
+          <CategoryLeft>
+            <CategoryItem style={{ borderBottom: "2px solid" }}>
+              <FontAwesomeIcon icon={faArrowTrendUp} /> &nbsp; 트렌딩
+            </CategoryItem>
+            <CategoryItem style={{ color: "#868e96", fontWeight: 400 }}>
+              <FontAwesomeIcon icon={faClock} /> &nbsp; 최신
+            </CategoryItem>
+            <Period>
+              <PeriodText>이번 주</PeriodText>
+              <FontAwesomeIcon icon={faCaretDown} />
+            </Period>
+          </CategoryLeft>
+          <CategoryRight>
+            <FontAwesomeIcon icon={faEllipsisVertical} />
+          </CategoryRight>
+        </Category>
 
         <Board />
-
-    </Body>
+      </Body>
+    </Root>
   );
 }
 
