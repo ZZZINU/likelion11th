@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 import {
   BodySection,
   DataTable,
@@ -7,16 +7,16 @@ import {
   HomeContainer,
   TableTh,
   TableTd,
-} from "./components/BodyStyle";
-import axios from "axios"; // import 해주기!!
-import { useNavigate } from "react-router-dom";
+} from './components/BodyStyle'
+import axios from 'axios' // import 해주기!!
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   // State 작성------------------------------------------------
-  const [weatherData, setWeatherData] = useState([]);
-  const { VITE_APP_API_KEY } = import.meta.env;
+  const [weatherData, setWeatherData] = useState([])
+  const { VITE_APP_API_KEY } = import.meta.env
   // console.log(VITE_APP_API_KEY);
 
   // const API_KEY = import.meta.env;
@@ -27,37 +27,44 @@ const Home = () => {
     try {
       const response = await axios.get(
         `http://openAPI.seoul.go.kr:8088/${VITE_APP_API_KEY}/json/RealtimeCityAir/1/25/`
-      );
-      setWeatherData(response.data.RealtimeCityAir.row);
-      console.log(weatherData);
+      )
+      setWeatherData(response.data.RealtimeCityAir.row)
+      // console.log(weatherData)
     } catch (error) {
-      console.log("데이터를 불러오는데 실패했습니다.");
+      console.log('데이터를 불러오는데 실패했습니다.')
       // 로그아웃 처리 -> 로그인 페이지로 이동시키는 로직
     }
-  };
+  }
   // OPEN API 비동기로 불러와 State에 저장하기
 
   // ComponentDidMount-----------------------------------------
   useEffect(() => {
-    fetchData();
-  }, []);
+    fetchData()
+  }, [])
 
   // 미세먼지 가장 낮은 데이터 3개 추출
-  const sortedData = weatherData.sort((a, b) => a.PM10 - b.PM10).slice(0, 3);
-  console.log(sortedData);
-
+  const sortedData = weatherData.sort((a, b) => a.PM10 - b.PM10).slice(0, 3)
+  // console.log(sortedData)
+  // console.log(weatherData)
   // 통합대기환경등급 등급별 데이터 핸들링 함수
-  const rateColor = (IDEX_NM) => {
-    if (IDEX_NM === "좋음") {
-      return { color: "green", text: IDEX_NM };
-    } else if (IDEX_NM === "점검 중") {
-      return { color: "", text: "-" };
-    } else if (IDEX_NM === "나쁨") {
-      return { color: "red", text: IDEX_NM };
-    } else {
-      return { color: "", text: IDEX_NM };
+  const rateColor = IDEX_NM => {
+    // 좋음
+    if (IDEX_NM === '좋음') {
+      return { color: 'green', text: IDEX_NM }
     }
-  };
+    // 점검 중
+    else if (IDEX_NM === '') {
+      return { color: '', text: '-' }
+    }
+    // 나쁨
+    else if (IDEX_NM === '나쁨') {
+      return { color: 'red', text: IDEX_NM }
+    }
+    // 보통
+    else {
+      return { color: '', text: IDEX_NM }
+    }
+  }
 
   return (
     <HomeContainer>
@@ -79,22 +86,32 @@ const Home = () => {
           </thead>
           <tbody>
             {weatherData.map((lion, idx) => (
-              
               <tr
                 key={idx}
                 style={{
-                  backgroundColor: lion.MSRSTE_NM === "도봉구" ? "orange" : "",
+                  backgroundColor: lion.MSRSTE_NM === '도봉구' ? 'orange' : '',
                 }}
               >
                 <TableTd>{lion.MSRDT.slice(0, 8)}</TableTd>
-                <TableTd onClick={() => navigate(`/detail/${lion.MSRSTE_NM}`)}>
+                <TableTd
+                  onClick={() =>
+                    navigate(`/detail/${lion.MSRSTE_NM}`, {
+                      state: {
+                        MSRRGN_NM: lion.MSRRGN_NM, // 권역명
+                        MSRSTE_NM: lion.MSRSTE_NM, // 측정소명
+                        MSRDT: lion.MSRDT, // 측정일시
+                        PM10: lion.PM10, // 미세먼지(㎍/㎥)
+                        PM25: lion.PM25, // 초미세먼지농도(㎍/㎥)
+                        O3: lion.O3, // 오존(ppm)
+                        IDEX_NM: lion.IDEX_NM, // 통합대기환경등급
+                        IDEX_MVL: lion.IDEX_MVL, // 통합대기환경지수
+                      },
+                    })
+                  }
+                >
                   {lion.MSRSTE_NM}
                 </TableTd>
-                <TableTd
-                // style={{ color: sortedData.includes(lion) ? "yellow" : "" }}
-                >
-                  {lion.PM10}
-                </TableTd>
+                <TableTd>{lion.PM10}</TableTd>
                 <TableTd>{lion.PM25}</TableTd>
                 <TableTd style={{ color: rateColor(lion.IDEX_NM).color }}>
                   {rateColor(lion.IDEX_NM).text}
@@ -113,7 +130,7 @@ const Home = () => {
         </DataTable>
       </BodySection>
     </HomeContainer>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
