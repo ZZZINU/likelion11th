@@ -131,7 +131,7 @@ const Detail = () => {
               <ContentRight>
                 <ContentBox>
                   <IntegratedAtmosphericEnvironmentRating>
-                    <IAERTitle>통합대기환경</IAERTitle>
+                    <IAERTitle>통합대기환경등급</IAERTitle>
                     <IAERData>{IDEX_NM}</IAERData>
                   </IntegratedAtmosphericEnvironmentRating>
                 </ContentBox>
