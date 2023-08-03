@@ -18,7 +18,7 @@ export default function MovieModal({
         <ModalContainer>
             <Modal>
                 <ModalCloseBtn
-                    
+                    onClick={()=>setModalOpen(false)}
                 >
                     X
                 </ModalCloseBtn>
