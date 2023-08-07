@@ -1,7 +1,18 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "../../api/axios";
 import MovieModal from "../MovieModal/MovieModal";
 import { RowContainer, RowPosters, RowPoster, RowTitle } from "./Styled";
+
+// Swiper
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+// import required modules
+import { Navigation } from "swiper/modules";
 
 export default function Row({ isLarge, title, id, fetchUrl }) {
   const [movies, setMovies] = useState([]);
@@ -37,19 +48,28 @@ export default function Row({ isLarge, title, id, fetchUrl }) {
       )}
       <RowContainer>
         <RowTitle>{title}</RowTitle>
-        <RowPosters>
+        <Swiper
+          slidesPerView={title === "NETFLIX ORIGINALS" ? 13 : 6}
+          spaceBetween={20}
+          navigation={true}
+          modules={[Navigation]}
+          className="Swiper"
+        >
           {movies.map((movie) => (
-            <RowPoster
-              key={movie.id}
-              islarge={isLarge ? "true" : "false"}
-              src={`https://image.tmdb.org/t/p/original/${
-                isLarge ? movie.poster_path : movie.backdrop_path
-              }`}
-              alt={movie.name}
-              onClick={() => handleClick(movie)}
-            />
+            <SwiperSlide key={movie.id}>
+              <RowPosters>
+                <RowPoster
+                  islarge={isLarge ? "true" : "false"}
+                  src={`https://image.tmdb.org/t/p/original/${
+                    isLarge ? movie.poster_path : movie.backdrop_path
+                  }`}
+                  alt={movie.name}
+                  onClick={() => handleClick(movie)}
+                />
+              </RowPosters>
+            </SwiperSlide>
           ))}
-        </RowPosters>
+        </Swiper>
       </RowContainer>
     </>
   );
